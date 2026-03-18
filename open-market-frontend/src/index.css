@@ -1,0 +1,50 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply antialiased text-gray-800 bg-gray-50;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold 
+           hover:bg-primary-700 transition-all duration-300 
+           transform hover:scale-105 hover:shadow-lg
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-lg font-semibold
+           hover:bg-primary-50 transition-all duration-300
+           transform hover:scale-105 active:scale-95;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none 
+           focus:ring-2 focus:ring-primary-500 focus:border-transparent
+           transition-all duration-300;
+  }
+  
+  .floating-notification {
+    @apply fixed top-4 right-4 z-50 animate-slide-down;
+  }
+  
+  .loading-spinner {
+    @apply animate-spin rounded-full border-4 border-gray-200 border-t-primary-600 h-12 w-12;
+  }
+}
