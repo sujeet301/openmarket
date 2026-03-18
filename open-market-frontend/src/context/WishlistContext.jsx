@@ -11,6 +11,7 @@ export const useWishlist = () => {
     throw new Error('useWishlist must be used within WishlistProvider');
   }
   return context;
+  
 };
 
 export const WishlistProvider = ({ children }) => {
